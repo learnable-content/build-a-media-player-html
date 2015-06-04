@@ -8,27 +8,53 @@
 <body>
 
 <div class="media">
-	
-	<video poster="media/poster.png" preload="auto">
-		<source src="media/video.webm" type='video/webm;codecs="vp8, vorbis"'>
-  		<source src="media/video.mp4" type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"'>
-  		<source src="media/video.ogv" type='video/ogg;codecs="theora, vorbis"'>
-		
-		<p>
-			Your browser doesn't support HTML5 video playback.
-			You can <a href="media/video.mp4">Download the video instead</a>.
-		</p>
-	</video>
-
+	<div class="media-player">
+		<video poster="media/poster.png" preload="auto">
+			<source src="media/video.webm" type='video/webm;codecs="vp8, vorbis"'>
+	  		<source src="media/video.mp4" type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"'>
+	  		<source src="media/video.ogv" type='video/ogg;codecs="theora, vorbis"'>
+			
+			<p>
+				Your browser doesn't support HTML5 video playback.
+				You can <a href="media/video.mp4">Download the video instead</a>.
+			</p>
+		</video>
+		<div class="media-player-controls">
+			<button type="button" class="controls button controls-play-pause">
+				Play / Pause
+			</button>
+			<input type="range" class="controls controls-seek" min="0" max="100" step="1" value="0">
+			<button type="button" class="controls button controls-mute">
+				Mute
+			</button>
+			<input type="range" class="controls controls-volume" min="0" max="100" step="1" value="100">
+			<button type="button" class="controls button controls-fullscreen">
+				Toggle Full-screen
+			</button>
+		</div>
+	</div>
 </div>
 
 <div class="media">
-	
-	<audio preload="auto">
-		<source src="media/audio.ogg" type="audio/ogg">
-		<source src="media/audio.mp3" type="audio/mpeg3">
-	</audio>
-	
+	<div class="media-player">
+		<audio preload="auto">
+			<source src="media/audio.ogg" type="audio/ogg">
+			<source src="media/audio.mp3" type="audio/mpeg3">
+		</audio>
+		<div class="media-player-controls">
+			<button type="button" class="controls button controls-play-pause">
+				Play / Pause
+			</button>
+			<input type="range" class="controls controls-seek" min="0" max="100" step="1" value="0">
+			<button type="button" class="controls button controls-mute">
+				Mute
+			</button>
+			<input type="range" class="controls controls-volume" min="0" max="1" step="0.05" value="1">
+			<button type="button" class="controls button controls-fullscreen">
+				Toggle Full-screen
+			</button>
+		</div>
+	</div>
 </div>
 
 </body>
